@@ -4,8 +4,9 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/:startDate/:endDate', function(req, res, next) {
   req.params.startDate
-  var result = randomTime(new Date(req.params.startDate), new Date(req.params.endDate));
-  res.send(result.toLocaleDateString('en-NL'));
+  var randomDate = randomTime(new Date(req.params.startDate), new Date(req.params.endDate));
+  let data = JSON.stringify({ result: randomDate.toLocaleDateString('en-NL') });
+  res.send(data);
 });
 
 function randomTime(start, end) {
