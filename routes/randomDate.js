@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/:startDate/:endDate', function(req, res, next) {
   req.params.startDate
   var result = randomTime(new Date(req.params.startDate), new Date(req.params.endDate));
-  res.send('Result:'+result.toLocaleDateString('en-NL'));
+  res.send(result.toLocaleDateString('en-NL'));
 });
 
 function randomTime(start, end) {
