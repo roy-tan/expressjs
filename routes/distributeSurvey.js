@@ -4,7 +4,7 @@ const axios = require('axios'); // Import the axios library
 
 // Route to handle JSON POST request
 router.post('/', async (req, res) => {
-  const requestData = req.body;
+  const requestData = JSON.stringify(req.body);
   console.log('Received JSON data:', requestData);
   // You can now process the initial JSON data as needed
   // Define custom headers for the Axios POST request
