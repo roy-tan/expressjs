@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
 
   try {
     // Make a JSON POST request to another API
-    const response = await axios.post('https://fra1.qualtrics.com/API/v3/directories/POOL_YQsbfLEGgwtoc9j/transactions', requestData, axiosConfig);
+    const response = await axios.post('https://fra1.qualtrics.com/API/v3/directories/POOL_YQsbfLEGgwtoc9j/transactions', requestData.jsonArray, axiosConfig);
     console.log('Response from second POST request:', response.data);
 
     res.status(200).json({ message: 'JSON data received and processed successfully' });
