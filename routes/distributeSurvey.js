@@ -3,7 +3,7 @@ var router = express.Router();
 const axios = require('axios'); // Import the axios library
 
 // Route to handle JSON POST request
-app.post('/', async (req, res) => {
+router.post('/', async (req, res) => {
   const requestData = req.body;
   console.log('Received JSON data:', requestData);
   // You can now process the initial JSON data as needed
